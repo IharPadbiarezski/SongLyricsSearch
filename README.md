@@ -1,3 +1,3 @@
 # SongLyricsSearch
-Song Lyrics Search
+Song Lyrics Search with Modules
 Link: https://iharpadbiarezski.github.io/SongLyricsSearch/
