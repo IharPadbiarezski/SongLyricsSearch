@@ -1,3 +1,4 @@
+import { API } from "./api.js";
 import * as UI from "./ui.js";
 
 UI.searchForm.addEventListener("submit", e => {
@@ -17,5 +18,10 @@ UI.searchForm.addEventListener("submit", e => {
     }, 3000);
   } else {
     // Query the REST API
+    const lyric = new API(artistName, songName);
+    lyric.queryAPI().then(data => {
+      let result = data.lyric.lyrics;
+      UI.resultDiv.textContent = result;
+    });
   }
 });
